@@ -120,7 +120,7 @@ function parse!(
 
         for (ωi, di) in Virtual.expansion(vi)
             for (ωj, dj) in Virtual.expansion(vj)
-                g[union(ωi, ωj)] += c * di * dj
+                g[PBO.varmul(ωi, ωj)] += c * di * dj
             end
         end
     end
